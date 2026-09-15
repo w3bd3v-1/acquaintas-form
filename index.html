@@ -1,0 +1,791 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<title>Acquaintas Global Launch Details</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Lato:wght@400;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+
+<style>
+  :root {
+    --ground:#F5F8FB; --surface:#FFFFFF; --sunk:#ECF1F7;
+    --ink:#0B1B2B; --muted:#51667C; --faint:#5B6F82;
+    --navy:#003366; --orange:#FF6600; --orange-ink:#0B1B2B; --orange-deep:#B03D00;
+    --teal:#0E7A7E; --hair:#D7E1EC; --hair-firm:#BCCBDB;
+    --need:#B03D00; --done:#0E7A7E;
+    --f-display:"Montserrat","Helvetica Neue",Helvetica,Arial,sans-serif;
+    --f-body:"Lato","Helvetica Neue",Helvetica,Arial,sans-serif;
+    --f-mono:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --ground:#071320; --surface:#0D1F30; --sunk:#0A1926;
+      --ink:#E9F0F7; --muted:#9FB3C8; --faint:#7089A2;
+      --navy:#5790FC; --orange:#FF7A1A; --orange-ink:#0B1B2B; --orange-deep:#FF8A33;
+      --teal:#35B9BD; --hair:#1C3245; --hair-firm:#2A4560;
+      --need:#FF8A33; --done:#35B9BD;
+    }
+  }
+  :root[data-theme="dark"] {
+    --ground:#071320; --surface:#0D1F30; --sunk:#0A1926;
+    --ink:#E9F0F7; --muted:#9FB3C8; --faint:#7089A2;
+    --navy:#5790FC; --orange:#FF7A1A; --orange-ink:#0B1B2B; --orange-deep:#FF8A33;
+    --teal:#35B9BD; --hair:#1C3245; --hair-firm:#2A4560;
+    --need:#FF8A33; --done:#35B9BD;
+  }
+
+  *,*::before,*::after{box-sizing:border-box;}
+  body{margin:0;background:var(--ground);color:var(--ink);
+       font-family:var(--f-body);font-size:16.5px;line-height:1.6;}
+  .page{max-width:800px;margin-inline:auto;padding-inline:22px;padding-block:0 90px;}
+  h1,h2,h3{font-family:var(--f-display);margin:0;line-height:1.18;text-wrap:balance;}
+  p{margin:0;}
+
+  .eyebrow{font-family:var(--f-mono);font-size:11.5px;letter-spacing:.15em;
+           text-transform:uppercase;color:var(--faint);}
+
+  header.top{border-bottom:2px solid var(--ink);padding-block:44px 22px;margin-bottom:0;}
+  header.top h1{font-size:clamp(28px,4.6vw,38px);font-weight:700;
+                letter-spacing:-.024em;margin:12px 0 14px;}
+  .lede{color:var(--muted);font-size:17.5px;max-width:60ch;}
+  .lede + .lede{margin-top:12px;}
+
+  /* Sticky progress */
+  .bar{position:sticky;top:0;z-index:20;background:var(--ground);
+       border-bottom:1px solid var(--hair);padding-block:13px;margin-bottom:34px;}
+  .bar-in{display:flex;align-items:center;gap:14px;flex-wrap:wrap;}
+  .bar-txt{font-family:var(--f-mono);font-size:12px;letter-spacing:.08em;
+           text-transform:uppercase;color:var(--faint);}
+  .bar-txt b{color:var(--ink);font-weight:500;font-variant-numeric:tabular-nums;}
+  .track{flex:1;min-width:120px;height:5px;background:var(--sunk);
+         border:1px solid var(--hair);overflow:hidden;}
+  .fill{height:100%;width:0;background:var(--done);transition:width .3s ease;}
+  @media (prefers-reduced-motion: reduce){ .fill{transition:none;} }
+
+  section{margin-bottom:46px;}
+  section > h2{font-size:21px;font-weight:700;letter-spacing:-.015em;
+               padding-bottom:9px;border-bottom:1px solid var(--hair-firm);}
+  .sec-note{color:var(--muted);font-size:15.5px;margin-top:11px;}
+
+  .q{padding:20px 0 4px;border-bottom:1px solid var(--hair);}
+  .q:last-child{border-bottom:0;}
+  .q-head{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;margin-bottom:4px;}
+  .q-head label,.q-head .lbl{font-family:var(--f-display);font-weight:700;
+                             font-size:16px;letter-spacing:-.005em;color:var(--ink);}
+  .tag{font-family:var(--f-mono);font-size:9.5px;font-weight:500;letter-spacing:.12em;
+       text-transform:uppercase;padding:2px 6px;border:1px solid currentColor;flex:none;}
+  .tag--need{color:var(--need);}
+  .tag--opt{color:var(--faint);}
+  .help{color:var(--muted);font-size:14.5px;margin-bottom:11px;}
+
+  input[type=text],input[type=tel],input[type=email],input[type=url],textarea{
+    font-family:var(--f-body);font-size:16px;color:var(--ink);background:var(--surface);
+    border:1px solid var(--hair-firm);border-radius:3px;padding:10px 12px;width:100%;
+    margin-bottom:14px;}
+  textarea{resize:vertical;min-height:88px;line-height:1.55;}
+  textarea.tall{min-height:132px;}
+  input:focus-visible,textarea:focus-visible{outline:none;border-color:var(--navy);
+    box-shadow:0 0 0 3px rgba(255,102,0,.3);}
+
+  .opts{display:flex;flex-wrap:wrap;gap:8px 20px;margin-bottom:14px;}
+  .opts label{display:inline-flex;align-items:center;gap:8px;font-size:15.5px;
+              color:var(--ink);cursor:pointer;}
+  input[type=radio],input[type=checkbox]{accent-color:var(--orange);width:17px;height:17px;
+                                          flex:none;cursor:pointer;margin:0;}
+
+  /* Actions */
+  .actions{background:var(--surface);border:1px solid var(--hair);
+           border-left:3px solid var(--orange);padding:26px 26px 28px;margin-top:8px;}
+  .actions h2{font-size:19px;font-weight:700;margin-bottom:10px;border:0;padding:0;}
+  .actions p{color:var(--muted);font-size:15.5px;}
+  .btns{display:flex;flex-wrap:wrap;gap:12px;margin-top:20px;}
+  .btn{display:inline-flex;align-items:center;gap:9px;font-family:var(--f-display);
+       font-size:15px;font-weight:600;padding:12px 20px;border-radius:3px;
+       border:1px solid transparent;cursor:pointer;text-decoration:none;
+       transition:background-color .18s ease,border-color .18s ease;}
+  .btn--go{background:var(--orange);color:var(--orange-ink);}
+  .btn--go:hover{background:var(--orange-deep);color:#fff;}
+  .btn--alt{background:transparent;color:var(--ink);border-color:var(--hair-firm);}
+  .btn--alt:hover{border-color:var(--navy);}
+  @media (prefers-reduced-motion: reduce){ .btn{transition:none;} }
+  .said{margin-top:14px;font-size:15px;color:var(--done);min-height:1.4em;}
+
+  .out{width:100%;min-height:200px;margin-top:18px;font-family:var(--f-mono);
+       font-size:12.5px;line-height:1.55;background:var(--sunk);color:var(--ink);
+       border:1px solid var(--hair-firm);border-radius:3px;padding:14px;}
+
+  .save-note{font-family:var(--f-mono);font-size:11px;letter-spacing:.07em;
+             text-transform:uppercase;color:var(--faint);margin-top:16px;}
+
+  footer.end{margin-top:46px;padding-top:20px;border-top:1px solid var(--hair-firm);
+             font-size:14.5px;color:var(--faint);}
+
+  @media print{
+    .bar,.actions,.btns{display:none!important;}
+    body{background:#fff;color:#000;font-size:11pt;}
+    input,textarea{border:1px solid #999;}
+    section{page-break-inside:avoid;}
+  }
+</style>
+
+<div class="page">
+
+  <header class="top">
+    <p class="eyebrow">Website · information request</p>
+    <h1>A few details we need before the site goes live</h1>
+    <p class="lede">
+      The new Acquaintas Global website is built and ready. To publish it we need
+      some information only you can give us &mdash; your real contact details, a
+      handful of company registration numbers, and confirmation that what the site
+      says about your services is accurate.
+    </p>
+    <p class="lede">
+      Fill in whatever you can. Items marked <strong>Needed</strong> are the ones
+      holding up launch; everything marked <strong>Optional</strong> can follow
+      later. When you're done, use the buttons at the bottom to copy or download
+      your answers and send them back. Your answers are saved in this browser as
+      you type, so you can close the page and come back to it.
+    </p>
+  </header>
+
+  <div class="bar">
+    <div class="bar-in">
+      <span class="bar-txt"><b id="pct">0</b>% of needed answers</span>
+      <span class="track"><span class="fill" id="fill"></span></span>
+      <span class="bar-txt"><b id="cnt">0</b> of <b id="tot">0</b></span>
+    </div>
+  </div>
+
+  <!-- ================= 1. CONTACT ================= -->
+  <section>
+    <h2>1 &nbsp;How people reach you</h2>
+    <p class="sec-note">All of this appears publicly on the website.</p>
+
+    <div class="q">
+      <div class="q-head"><label for="q_phone">Main phone number</label><span class="tag tag--need">Needed</span></div>
+      <p class="help">Written the way someone calling from abroad would dial it, including the country code &mdash; for example +91 98765 43210.</p>
+      <input type="tel" id="q_phone" data-q="Main phone number" data-need="1">
+    </div>
+
+    <div class="q">
+      <div class="q-head"><label for="q_whats">WhatsApp number</label><span class="tag tag--opt">Optional</span></div>
+      <p class="help">Only if it's different from the number above. WhatsApp is how a lot of business enquiries actually arrive in India, so it's worth putting on the site.</p>
+      <input type="tel" id="q_whats" data-q="WhatsApp number">
+    </div>
+
+    <div class="q">
+      <div class="q-head"><label for="q_email">Email address for the website</label><span class="tag tag--need">Needed</span></div>
+      <p class="help">The address enquiries should be sent to. We've assumed contact@acquaintasglobal.com &mdash; please confirm it exists and is monitored, or give us a different one.</p>
+      <input type="email" id="q_email" data-q="Public email address" data-need="1">
+    </div>
+
+    <div class="q">
+      <div class="q-head"><label for="q_addr">Office address</label><span class="tag tag--need">Needed</span></div>
+      <p class="help">The full address, written exactly as you want it to appear.</p>
+      <textarea id="q_addr" data-q="Office address" data-need="1"></textarea>
+      <p class="help">How much of it should be public?</p>
+      <div class="opts" data-q="Address visibility">
+        <label><input type="radio" name="addrvis" value="Show the full street address"> Show the full street address</label>
+        <label><input type="radio" name="addrvis" value="Show city and country only"> Show city and country only</label>
+      </div>
+    </div>
+
+    <div class="q">
+      <div class="q-head"><label for="q_li">LinkedIn company page</label><span class="tag tag--need">Needed</span></div>
+      <p class="help">The full web address of the company page. If there isn't one yet, say so &mdash; for a firm selling international credibility it's worth creating before launch.</p>
+      <input type="url" id="q_li" data-q="LinkedIn company page" data-need="1">
+    </div>
+
+    <div class="q">
+      <div class="q-head"><label for="q_social">Other profiles</label><span class="tag tag--opt">Optional</span></div>
+      <p class="help">Instagram, X, Facebook, YouTube &mdash; whichever you actively use. Leave out anything dormant; an empty profile is worse than no link.</p>
+      <textarea id="q_social" data-q="Other social profiles"></textarea>
+    </div>
+
+    <div class="q">
+      <div class="q-head"><label for="q_hours">Office hours and time zone</label><span class="tag tag--opt">Optional</span></div>
+      <p class="help">Helpful for clients in Tokyo or Frankfurt working out when they'll hear back.</p>
+      <input type="text" id="q_hours" data-q="Office hours and time zone">
+    </div>
+  </section>
+
+  <!-- ================= 2. COMPANY ================= -->
+  <section>
+    <h2>2 &nbsp;The company itself</h2>
+    <p class="sec-note">
+      Registration numbers are the cheapest trust signal a B2B site has, and for a firm
+      that sells import-export compliance, publishing your own IEC is direct proof you
+      hold one. The legal name and retention period are also needed for the privacy policy.
+    </p>
+
+    <div class="q">
+      <div class="q-head"><label for="q_legal">Registered company name</label><span class="tag tag--need">Needed</span></div>
+      <p class="help">Exactly as it appears on the incorporation certificate, including "Private Limited", "LLP" or similar.</p>
+      <input type="text" id="q_legal" data-q="Registered company name" data-need="1">
+    </div>
+
+    <div class="q">
+      <div class="q-head"><label for="q_regaddr">Registered office address</label><span class="tag tag--opt">Optional</span></div>
+      <p class="help">Only if it differs from the office address above.</p>
+      <textarea id="q_regaddr" data-q="Registered office address"></textarea>
+    </div>
+
+    <div class="q">
+      <div class="q-head"><label for="q_year">Year the business was established</label><span class="tag tag--need">Needed</span></div>
+      <p class="help">The site currently says nothing about how long you've been going, which tends to read as newer rather than older.</p>
+      <input type="text" id="q_year" data-q="Year established" data-need="1">
+    </div>
+
+    <div class="q">
+      <div class="q-head"><label for="q_cin">CIN (Corporate Identity Number)</label><span class="tag tag--opt">Recommended</span></div>
+      <p class="help">Shown in the footer alongside the other registration details.</p>
+      <input type="text" id="q_cin" data-q="CIN">
+    </div>
+
+    <div class="q">
+      <div class="q-head"><label for="q_gst">GSTIN</label><span class="tag tag--opt">Recommended</span></div>
+      <input type="text" id="q_gst" data-q="GSTIN">
+    </div>
+
+    <div class="q">
+      <div class="q-head"><label for="q_iec">IEC (Importer-Exporter Code)</label><span class="tag tag--opt">Recommended</span></div>
+      <p class="help">Worth publishing prominently &mdash; it proves you hold the licence you help other companies obtain.</p>
+      <input type="text" id="q_iec" data-q="IEC">
+    </div>
+
+    <div class="q">
+      <div class="q-head"><span class="lbl">How long should we keep enquiry emails?</span><span class="tag tag--need">Needed</span></div>
+      <p class="help">The privacy policy has to state a period, and it has to match what you actually do. Pick whichever is closest to your real practice.</p>
+      <div class="opts" data-q="Enquiry retention period">
+        <label><input type="radio" name="retain" value="12 months"> 12 months</label>
+        <label><input type="radio" name="retain" value="24 months"> 24 months</label>
+        <label><input type="radio" name="retain" value="36 months"> 36 months</label>
+        <label><input type="radio" name="retain" value="Not sure — please advise"> Not sure, advise us</label>
+      </div>
+    </div>
+
+    <div class="q">
+      <div class="q-head"><label for="q_dpo">Who handles privacy requests?</label><span class="tag tag--need">Needed</span></div>
+      <p class="help">A name and email address. If a European client asks what data you hold on them, this is the person who answers &mdash; it can be an existing team member.</p>
+      <input type="text" id="q_dpo" data-q="Privacy contact (name and email)" data-need="1">
+    </div>
+  </section>
+
+  <!-- ================= 3. TEAM ================= -->
+  <section>
+    <h2>3 &nbsp;Your team</h2>
+    <p class="sec-note">
+      Three people currently appear on the site, using bios and photographs supplied in 2024.
+      We need you to confirm they're still right and that everyone is happy to be published.
+    </p>
+
+    <div class="q">
+      <div class="q-head"><label for="q_mohit">Mohit Sablok &mdash; his role at Acquaintas Global</label><span class="tag tag--need">Needed</span></div>
+      <p class="help">
+        He's currently listed as "Founder &amp; Managing Partner, MSA Legal", which is a
+        different firm &mdash; a careful reader will wonder what his connection to Acquaintas
+        Global is. Please give us the title he should carry here: partner, co-founder,
+        of counsel, legal advisor, or whatever is accurate.
+      </p>
+      <input type="text" id="q_mohit" data-q="Mohit Sablok — role at Acquaintas Global" data-need="1">
+    </div>
+
+    <div class="q">
+      <div class="q-head"><label for="q_piyush">Piyush Dev &mdash; confirm his title</label><span class="tag tag--need">Needed</span></div>
+      <p class="help">Currently "Talent Acquisition &amp; Program Manager". Correct it if that's out of date.</p>
+      <input type="text" id="q_piyush" data-q="Piyush Dev — title" data-need="1">
+    </div>
+
+    <div class="q">
+      <div class="q-head"><label for="q_rhish">Rhishendra Giri &mdash; confirm his title</label><span class="tag tag--need">Needed</span></div>
+      <p class="help">Currently "Business Strategy &amp; Operations Consultant".</p>
+      <input type="text" id="q_rhish" data-q="Rhishendra Giri — title" data-need="1">
+    </div>
+
+    <div class="q">
+      <div class="q-head"><span class="lbl">Permission to publish photos and biographies</span><span class="tag tag--need">Needed</span></div>
+      <p class="help">Please confirm each person has agreed to their photograph and biography appearing on a public website.</p>
+      <div class="opts" data-q="Photo and bio permission">
+        <label><input type="checkbox" name="consent" value="Mohit Sablok has agreed"> Mohit Sablok has agreed</label>
+        <label><input type="checkbox" name="consent" value="Piyush Dev has agreed"> Piyush Dev has agreed</label>
+        <label><input type="checkbox" name="consent" value="Rhishendra Giri has agreed"> Rhishendra Giri has agreed</label>
+      </div>
+    </div>
+
+    <div class="q">
+      <div class="q-head"><span class="lbl">Can the three of you sit for one photo session?</span><span class="tag tag--opt">Recommended</span></div>
+      <p class="help">
+        The current photographs don't match &mdash; two are studio portraits in business
+        dress and one is a passport-style photo in a polo shirt. Side by side that's the
+        first thing a visitor notices. One afternoon with the same background and framing
+        would do more for how established the firm looks than any change to the words.
+      </p>
+      <div class="opts" data-q="Joint photo session">
+        <label><input type="radio" name="shoot" value="Yes, we can arrange this"> Yes, we can arrange it</label>
+        <label><input type="radio" name="shoot" value="Yes, but later — launch without it"> Yes, but after launch</label>
+        <label><input type="radio" name="shoot" value="No — use the existing photographs"> No, use what you have</label>
+      </div>
+    </div>
+
+    <div class="q">
+      <div class="q-head"><label for="q_liteam">LinkedIn profiles for each person</label><span class="tag tag--opt">Optional</span></div>
+      <p class="help">Individual profile links, if they'd like them shown on their cards.</p>
+      <textarea id="q_liteam" data-q="Team LinkedIn profiles"></textarea>
+    </div>
+
+    <div class="q">
+      <div class="q-head"><label for="q_more">Anyone else who should appear</label><span class="tag tag--opt">Optional</span></div>
+      <p class="help">Name, title and a short description for anyone missing.</p>
+      <textarea id="q_more" data-q="Additional team members"></textarea>
+    </div>
+  </section>
+
+  <!-- ================= 4. PROOF ================= -->
+  <section>
+    <h2>4 &nbsp;Proof of the work</h2>
+    <p class="sec-note">
+      This is the most valuable section on the page, and the one that will take you longest.
+      The site currently says Acquaintas Global has a proven track record, but it doesn't
+      name a single client, outcome or number. Anyone comparing you against another firm
+      has nothing to go on. Two concrete examples would do more than any amount of rewriting.
+    </p>
+
+    <div class="q">
+      <div class="q-head"><label for="q_case1">Engagement one</label><span class="tag tag--need">Needed</span></div>
+      <p class="help">
+        Tell it as a short story, even roughly &mdash; we'll write it properly. Useful to
+        include: what sort of business they were and which country, what they were trying
+        to do, what you actually did, how long it took, and how it turned out.
+      </p>
+      <textarea class="tall" id="q_case1" data-q="Engagement one" data-need="1"></textarea>
+      <p class="help">Can this client be named on the website?</p>
+      <div class="opts" data-q="Engagement one — naming">
+        <label><input type="radio" name="name1" value="Yes, we can name them"> Yes</label>
+        <label><input type="radio" name="name1" value="Describe by sector and country only"> Sector and country only</label>
+        <label><input type="radio" name="name1" value="Need to ask them first"> Need to ask them</label>
+      </div>
+    </div>
+
+    <div class="q">
+      <div class="q-head"><label for="q_case2">Engagement two</label><span class="tag tag--need">Needed</span></div>
+      <textarea class="tall" id="q_case2" data-q="Engagement two" data-need="1"></textarea>
+      <p class="help">Can this client be named on the website?</p>
+      <div class="opts" data-q="Engagement two — naming">
+        <label><input type="radio" name="name2" value="Yes, we can name them"> Yes</label>
+        <label><input type="radio" name="name2" value="Describe by sector and country only"> Sector and country only</label>
+        <label><input type="radio" name="name2" value="Need to ask them first"> Need to ask them</label>
+      </div>
+    </div>
+
+    <div class="q">
+      <div class="q-head"><label for="q_case3">Engagement three</label><span class="tag tag--opt">Optional</span></div>
+      <textarea id="q_case3" data-q="Engagement three"></textarea>
+    </div>
+
+    <div class="q">
+      <div class="q-head"><label for="q_quotes">Clients who might give a short quote</label><span class="tag tag--opt">Optional</span></div>
+      <p class="help">
+        Just names and how you'd approach them &mdash; we'll draft something for them to
+        approve rather than asking them to write it. To be clear, we will not put an
+        invented testimonial on the site, so this section stays empty until real ones exist.
+      </p>
+      <textarea id="q_quotes" data-q="Possible client quotes"></textarea>
+    </div>
+
+    <div class="q">
+      <div class="q-head"><label for="q_logos">Client logos you have permission to show</label><span class="tag tag--opt">Optional</span></div>
+      <p class="help">Only where they've agreed in writing.</p>
+      <textarea id="q_logos" data-q="Client logos with permission"></textarea>
+    </div>
+
+    <div class="q">
+      <div class="q-head"><label for="q_numbers">Numbers you can stand behind</label><span class="tag tag--opt">Optional</span></div>
+      <p class="help">
+        Companies helped, years in the sector, shipments handled, entities incorporated,
+        markets covered. Only things that are true and you could evidence if asked &mdash;
+        a number that can't be defended is worse than no number.
+      </p>
+      <textarea id="q_numbers" data-q="Figures we can publish"></textarea>
+    </div>
+  </section>
+
+  <!-- ================= 5. SERVICES ================= -->
+  <section>
+    <h2>5 &nbsp;Is what we've written accurate?</h2>
+    <p class="sec-note">
+      The site describes three practices. Some of the detail was drafted from general
+      knowledge of the sector rather than from you, so please check it carefully &mdash;
+      claiming a service you don't provide is a problem we want to catch now.
+    </p>
+
+    <div class="q">
+      <div class="q-head"><span class="lbl">Business consulting</span></div>
+      <p class="help">
+        Listed as: market analysis and opportunity sizing &middot; strategy development and
+        business modelling &middot; process and operational improvement &middot; corporate
+        reorganisation.
+      </p>
+      <div class="opts" data-q="Business consulting — accurate?">
+        <label><input type="radio" name="s1" value="Accurate as written"> Accurate</label>
+        <label><input type="radio" name="s1" value="Needs changes (see notes)"> Needs changes</label>
+      </div>
+      <textarea id="q_s1" data-q="Business consulting — corrections"></textarea>
+    </div>
+
+    <div class="q">
+      <div class="q-head"><span class="lbl">Import-export solutions</span></div>
+      <p class="help">
+        Listed as: export documentation and IEC registration &middot; customs and regulatory
+        compliance &middot; logistics and freight coordination &middot; buyer and distributor
+        sourcing.
+      </p>
+      <div class="opts" data-q="Import-export — accurate?">
+        <label><input type="radio" name="s2" value="Accurate as written"> Accurate</label>
+        <label><input type="radio" name="s2" value="Needs changes (see notes)"> Needs changes</label>
+      </div>
+      <textarea id="q_s2" data-q="Import-export — corrections"></textarea>
+    </div>
+
+    <div class="q">
+      <div class="q-head"><span class="lbl">Market entry support</span></div>
+      <p class="help">
+        Listed as: entity setup and company incorporation &middot; corporate, real estate and
+        IPR legal support &middot; partner identification and due diligence &middot; local
+        hiring and team build-out.
+      </p>
+      <div class="opts" data-q="Market entry — accurate?">
+        <label><input type="radio" name="s3" value="Accurate as written"> Accurate</label>
+        <label><input type="radio" name="s3" value="Needs changes (see notes)"> Needs changes</label>
+      </div>
+      <textarea id="q_s3" data-q="Market entry — corrections"></textarea>
+    </div>
+
+    <div class="q">
+      <div class="q-head"><label for="q_notdo">Anything listed that you do <em>not</em> actually do</label><span class="tag tag--need">Needed</span></div>
+      <p class="help">Please be strict here. It's much cheaper to remove a claim now than to be asked to deliver on it later.</p>
+      <textarea id="q_notdo" data-q="Services listed that we do NOT provide" data-need="1"></textarea>
+    </div>
+
+    <div class="q">
+      <div class="q-head"><label for="q_missing">Anything you do that's missing</label><span class="tag tag--opt">Optional</span></div>
+      <textarea id="q_missing" data-q="Services missing from the site"></textarea>
+    </div>
+  </section>
+
+  <!-- ================= 6. MARKETS ================= -->
+  <section>
+    <h2>6 &nbsp;Markets</h2>
+    <p class="sec-note">
+      The homepage names Japan, Europe, China and Nepal, taken from the team biographies.
+      These appear on the globe and in the strip beneath it.
+    </p>
+
+    <div class="q">
+      <div class="q-head"><span class="lbl">Are those four right?</span><span class="tag tag--need">Needed</span></div>
+      <div class="opts" data-q="Markets correct?">
+        <label><input type="radio" name="mk" value="Yes, all four are accurate"> Yes, all four</label>
+        <label><input type="radio" name="mk" value="Mostly — see notes"> Mostly, see notes</label>
+        <label><input type="radio" name="mk" value="No — see notes"> No, see notes</label>
+      </div>
+      <textarea id="q_mknotes" data-q="Markets — notes"></textarea>
+    </div>
+
+    <div class="q">
+      <div class="q-head"><label for="q_priority">Priority markets for the next year</label><span class="tag tag--opt">Optional</span></div>
+      <p class="help">Where you'd most like new business to come from. This shapes what we write first if you later want a page per market.</p>
+      <input type="text" id="q_priority" data-q="Priority markets">
+    </div>
+  </section>
+
+  <!-- ================= 7. ENQUIRIES ================= -->
+  <section>
+    <h2>7 &nbsp;Where enquiries should land</h2>
+
+    <div class="q">
+      <div class="q-head"><label for="q_inbox">Inbox for contact form submissions</label><span class="tag tag--need">Needed</span></div>
+      <p class="help">Can be the same address as above or a different one. Until this is set, the form can't deliver anything.</p>
+      <input type="email" id="q_inbox" data-q="Inbox for form submissions" data-need="1">
+    </div>
+
+    <div class="q">
+      <div class="q-head"><label for="q_who">Who replies, and how quickly</label><span class="tag tag--opt">Optional</span></div>
+      <p class="help">The site currently promises a reply within one business day. Tell us if that's not realistic and we'll change it &mdash; a promise you miss is worse than a slower one you keep.</p>
+      <input type="text" id="q_who" data-q="Who replies and target response time">
+    </div>
+  </section>
+
+  <!-- ================= 8. LATER ================= -->
+  <section>
+    <h2>8 &nbsp;Things to consider later</h2>
+    <p class="sec-note">None of this holds up launch. Answer if you have a view.</p>
+
+    <div class="q">
+      <div class="q-head"><span class="lbl">A Japanese-language version of the page</span><span class="tag tag--opt">Optional</span></div>
+      <p class="help">
+        Your team's deepest experience is the Japan corridor, and there's far less
+        English-language competition for Japanese searches. One properly translated page
+        would probably bring in more enquiries than any other single change.
+      </p>
+      <div class="opts" data-q="Japanese-language page">
+        <label><input type="radio" name="jp" value="Interested"> Interested</label>
+        <label><input type="radio" name="jp" value="Maybe later"> Maybe later</label>
+        <label><input type="radio" name="jp" value="Not a priority"> Not a priority</label>
+      </div>
+    </div>
+
+    <div class="q">
+      <div class="q-head"><span class="lbl">Publishing articles or guides</span><span class="tag tag--opt">Optional</span></div>
+      <p class="help">Pieces on import-export regulation, market entry and compliance are how consultancies in this field usually get found.</p>
+      <div class="opts" data-q="Articles and guides">
+        <label><input type="radio" name="blog" value="Yes, we could write these"> Yes, we could write them</label>
+        <label><input type="radio" name="blog" value="Yes, but we'd need help writing"> Yes, with help</label>
+        <label><input type="radio" name="blog" value="Not for now"> Not for now</label>
+      </div>
+    </div>
+
+    <div class="q">
+      <div class="q-head"><span class="lbl">Visitor analytics</span><span class="tag tag--opt">Optional</span></div>
+      <p class="help">The site currently collects nothing at all. A privacy-respecting tool would show how people find you without needing a cookie banner.</p>
+      <div class="opts" data-q="Analytics">
+        <label><input type="radio" name="an" value="Yes, add privacy-respecting analytics"> Yes, please add it</label>
+        <label><input type="radio" name="an" value="No, leave it collecting nothing"> No, leave it as is</label>
+      </div>
+    </div>
+
+    <div class="q">
+      <div class="q-head"><label for="q_book">Online booking link</label><span class="tag tag--opt">Optional</span></div>
+      <p class="help">If you use Calendly or similar, we can let people book the free consultation directly.</p>
+      <input type="url" id="q_book" data-q="Booking link">
+    </div>
+
+    <div class="q">
+      <div class="q-head"><label for="q_anything">Anything else</label><span class="tag tag--opt">Optional</span></div>
+      <p class="help">Anything you'd like changed, added or removed.</p>
+      <textarea id="q_anything" data-q="Anything else"></textarea>
+    </div>
+  </section>
+
+  <!-- ================= SEND ================= -->
+  <div class="actions">
+    <h2>Sending your answers back</h2>
+    <p>
+      Use either button below. <strong>Copy</strong> puts everything on your clipboard so
+      you can paste it straight into an email. <strong>Download</strong> saves it as a text
+      file you can attach. Unanswered questions are simply marked as such &mdash; partial
+      answers are genuinely useful, so don't wait until you have all of them.
+    </p>
+    <div class="btns">
+      <button class="btn btn--go" type="button" id="copy">Copy all answers</button>
+      <button class="btn btn--alt" type="button" id="dl">Download as a file</button>
+      <button class="btn btn--alt" type="button" id="show">Show as text</button>
+    </div>
+    <p class="said" id="said" role="status" aria-live="polite"></p>
+    <textarea class="out" id="out" hidden readonly aria-label="Your answers as plain text"></textarea>
+    <p class="save-note" id="savenote">Answers save automatically in this browser</p>
+  </div>
+
+  <footer class="end">
+    Prepared for Acquaintas Global. Nothing you type here is sent anywhere automatically
+    &mdash; it stays in your own browser until you copy or download it and send it yourself.
+  </footer>
+
+</div>
+
+<script>
+(function () {
+  'use strict';
+
+  var KEY = 'acquaintas-intake-v1';
+  var fields = Array.prototype.slice.call(document.querySelectorAll('[data-q]'));
+
+  /* ---- Reading and writing a value, whatever the control type ---- */
+  function readField(el) {
+    if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') return el.value.trim();
+    // a .opts group of radios or checkboxes
+    var picked = Array.prototype.slice.call(el.querySelectorAll('input:checked'));
+    return picked.map(function (i) { return i.value; }).join(', ');
+  }
+
+  function fieldKey(el) { return el.id || el.getAttribute('data-q'); }
+
+  /* ---- Progress over the "Needed" questions ---- */
+  var needed = fields.filter(function (el) { return el.hasAttribute('data-need'); });
+  // The two radio/checkbox groups that are needed but can't carry data-need on an input
+  var neededGroups = ['Enquiry retention period', 'Photo and bio permission', 'Markets correct?'];
+  fields.forEach(function (el) {
+    if (neededGroups.indexOf(el.getAttribute('data-q')) > -1 && needed.indexOf(el) === -1) {
+      needed.push(el);
+    }
+  });
+
+  var pct = document.getElementById('pct');
+  var cnt = document.getElementById('cnt');
+  var tot = document.getElementById('tot');
+  var fill = document.getElementById('fill');
+  tot.textContent = String(needed.length);
+
+  function updateProgress() {
+    var done = needed.filter(function (el) { return readField(el) !== ''; }).length;
+    var p = needed.length ? Math.round((done / needed.length) * 100) : 0;
+    cnt.textContent = String(done);
+    pct.textContent = String(p);
+    fill.style.width = p + '%';
+  }
+
+  /* ---- Draft autosave, per browser ---- */
+  function save() {
+    var data = {};
+    fields.forEach(function (el) { data[fieldKey(el)] = readField(el); });
+    try { localStorage.setItem(KEY, JSON.stringify(data)); } catch (e) { /* private mode */ }
+  }
+
+  function restore() {
+    var data;
+    try { data = JSON.parse(localStorage.getItem(KEY) || '{}'); } catch (e) { return; }
+    fields.forEach(function (el) {
+      var v = data[fieldKey(el)];
+      if (!v) return;
+      if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
+        el.value = v;
+      } else {
+        var chosen = v.split(', ');
+        Array.prototype.forEach.call(el.querySelectorAll('input'), function (i) {
+          if (chosen.indexOf(i.value) > -1) i.checked = true;
+        });
+      }
+    });
+  }
+
+  restore();
+  updateProgress();
+
+  document.addEventListener('input', function () { save(); updateProgress(); });
+  document.addEventListener('change', function () { save(); updateProgress(); });
+
+  /* ---- Building the plain-text answer sheet ---- */
+  function compose() {
+    var lines = [];
+    lines.push('ACQUAINTAS GLOBAL — WEBSITE DETAILS');
+    lines.push('Completed ' + new Date().toLocaleDateString('en-GB', {
+      day: 'numeric', month: 'long', year: 'numeric'
+    }));
+    lines.push('');
+
+    var sections = Array.prototype.slice.call(document.querySelectorAll('section'));
+    sections.forEach(function (sec) {
+      var heading = sec.querySelector('h2');
+      var rows = Array.prototype.slice.call(sec.querySelectorAll('[data-q]'));
+      if (!rows.length) return;
+
+      lines.push('');
+      lines.push('=== ' + heading.textContent.replace(/\s+/g, ' ').trim().toUpperCase() + ' ===');
+      lines.push('');
+
+      rows.forEach(function (el) {
+        var q = el.getAttribute('data-q');
+        var a = readField(el);
+        lines.push(q + ':');
+        lines.push(a ? a : '  (not answered)');
+        lines.push('');
+      });
+    });
+
+    var done = needed.filter(function (el) { return readField(el) !== ''; }).length;
+    lines.push('');
+    lines.push('---');
+    lines.push('Needed answers completed: ' + done + ' of ' + needed.length);
+    return lines.join('\n');
+  }
+
+  var said = document.getElementById('said');
+  var out = document.getElementById('out');
+
+  function say(msg) { said.textContent = msg; }
+
+  /* ---- Copy ---- */
+  document.getElementById('copy').addEventListener('click', function () {
+    var text = compose();
+    function fallback() {
+      out.hidden = false;
+      out.value = text;
+      out.focus();
+      out.select();
+      try {
+        document.execCommand('copy');
+        say('Copied. Paste it into an email and send it over.');
+      } catch (e) {
+        say('Select the text below, copy it, and paste it into an email.');
+      }
+    }
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text).then(function () {
+        say('Copied. Paste it into an email and send it over.');
+      })['catch'](fallback);
+    } else {
+      fallback();
+    }
+  });
+
+  /* ---- Download. Uses the platform save when the page is hosted, and a
+         plain blob link when it's a file opened straight from disk. ---- */
+  document.getElementById('dl').addEventListener('click', function () {
+    var text = compose();
+    var filename = 'acquaintas-global-website-details.txt';
+
+    function blobSave() {
+      try {
+        var url = URL.createObjectURL(new Blob([text], { type: 'text/plain' }));
+        var a = document.createElement('a');
+        a.href = url;
+        a.download = filename;
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        setTimeout(function () { URL.revokeObjectURL(url); }, 1000);
+        say('Saved to your downloads folder. Attach it to an email and send it over.');
+      } catch (e) {
+        say('Couldn’t save the file here — use "Copy all answers" instead.');
+      }
+    }
+
+    if (window.claude && typeof window.claude.use === 'function') {
+      window.claude.use('downloads').then(function (downloads) {
+        if (!downloads) return blobSave();
+        downloads.save({ filename: filename, data: text }).then(function () {
+          say('Saved. Attach it to an email and send it over.');
+        })['catch'](function (err) {
+          if (err && err.code === 'declined') { say('Save cancelled.'); return; }
+          blobSave();
+        });
+      })['catch'](blobSave);
+    } else {
+      blobSave();
+    }
+  });
+
+  /* ---- Show as text, for anyone who'd rather select it by hand ---- */
+  document.getElementById('show').addEventListener('click', function () {
+    out.hidden = !out.hidden;
+    if (!out.hidden) {
+      out.value = compose();
+      say('');
+    }
+  });
+
+  /* Tell the truth about whether the draft is actually being saved. */
+  try {
+    localStorage.setItem(KEY + '-test', '1');
+    localStorage.removeItem(KEY + '-test');
+  } catch (e) {
+    document.getElementById('savenote').textContent =
+      'This browser is blocking storage — your answers will not be kept if you close the page';
+  }
+})();
+</script>
+
+</body>
+</html>
